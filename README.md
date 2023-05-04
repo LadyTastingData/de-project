@@ -33,7 +33,11 @@ The data pipeline developed in this project can be summarized in 6 steps:
 </ol>
 
 
-In order to reproduce, apply the following steps:
+
+
+## Reproducibility:
+
+In order to reproduce this project, apply the following steps:
 
 - First of all, in order to be able to download data sets from Kaggle, run:
 ```
@@ -42,13 +46,18 @@ pip install kaggle
 - Then, download your kaggle.json credentials from Kaggle API, and put that json file in the folder .kaggle/.
 
 
-- Create a new folder
+- Create a new folder for this project
 
-- Copy the json file which includes your Google Cloud service account credentials into this folder
+- Copy the json file which includes your Google Cloud service account credentials into the folder
 
 - Clone this GitHub repo:
 ```
 git clone https://github.com/LadyTastingData/de-project.git
+```
+
+- Move to the folder de-project:
+```
+cd de-project
 ```
 
 
