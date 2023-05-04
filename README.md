@@ -84,6 +84,9 @@ conda activate de-project
 prefect orion start
 ```
 
+In file make_gcp_blocks.py, modify bucket_name and service_account_file according to your own settings.
+In file etl_gcs_to_bq.py, modify project_id according to your own Google Cloud project ID.
+
 Create Prefect GCS and GitHub blocks:
 ```
 python make_gcp_blocks.py 
@@ -96,22 +99,19 @@ In order to download the data set from Kaggle and upload it to Google Cloud Stor
 
 Then, run the following commands:
 ```
-prefect deployment build prefect/etl_web_to_gcs.py:etl_web_to_gcs --name "web_to_gcs" -sb github/de-project-ghblock
+prefect deployment build prefect/etl_web_to_gcs.py:etl_parent_flow --name "web_to_gcs" -sb github/de-project-ghblock --apply
 ```
-Inside the generated etl_web_to_gcs-deployment.yaml file, edit the parameters:
+In Prefect Orion, in Deployment start a quick run. Then,
 ```
-parameters: {"kaggle_user": "sidtwr", "dataset_name": "videogames-sales-dataset", "download_path": "data", "data_file": "Video_Games_Sales_as_at_22_Dec_2016"}
-```
-
-Then, run:
-```
-prefect deployment apply etl_web_to_gcs-deployment.yaml
 prefect agent start --work-queue "default"
 ```
 
-Then, in order to move the data from GC bucket to BigQuery:
+Repeat the same for etl_gcs_to_bq.py in order to move the data from GC bucket to BigQuery:
 ```
 prefect deployment build prefect/etl_gcs_to_bq.py:etl_gcs_to_bq --name gcs_to_bq -sb github/de-project-ghblock --apply
+```
+In Prefect Orion, in Deployment start a quick run. Then,
+```
 prefect agent start --work-queue "default"
 ```
 
