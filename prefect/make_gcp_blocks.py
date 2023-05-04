@@ -21,4 +21,4 @@ bucket_block = GcsBucket(
     bucket=bucket_name  # insert your  GCS bucket name
 )
 
-bucket_block.save("de-project", overwrite=True)
+bucket_block.save("de-project-gcs", overwrite=True)
