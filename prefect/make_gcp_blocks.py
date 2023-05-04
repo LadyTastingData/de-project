@@ -8,7 +8,7 @@ from pathlib import Path
 
 # Replace wity your own bucket_name and service_account_file
 bucket_name = "kaggle_data_lake_lithe-breaker-385610"
-service_account_file = Path("../lithe-breaker-385610-e22a767c96f3.json")
+service_account_file = Path("~/.google/credentials/lithe-breaker-385610-e22a767c96f3.json")
 
 credentials_block = GcpCredentials(
     service_account_file=service_account_file  # the json file with service account credentials
