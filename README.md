@@ -89,12 +89,26 @@ Create Prefect GCS and GitHub blocks:
 python make_gcp_blocks.py 
 python make_gh_block.py
 ```
- 
-Download data from Kaggle and upload it to Google Cloud Storage:
+
+In order to download data from Kaggle and upload it to Google Cloud Storage, go to the root folder, i.e., de-project, and run the following commands:
+```
+prefect deployment build prefect/etl_web_to_gcs.py:etl_web_to_gcs --name web_to_gcs -sb github/de-project-ghblock --apply
+prefect agent start --work-queue "default"
+```
+
+Then, in order to move the data from GC bucket to BigQuery:
+```
+prefect deployment build prefect/etl_gcs_to_bq.py:etl_gcs_to_bq --name gcs_to_bq -sb github/de-project-ghblock --apply
+prefect agent start --work-queue "default"
+```
+
+Alternatively, files can be run locally as normal python files as following:
+
+- To download data from Kaggle and upload it to Google Cloud Storage:
 ```
 python etl_web_to_gcs.py
 ```
-Move the data from GC bucket to BigQuery:
+- Move the data from GC bucket to BigQuery:
 ```
 python etl_gcs_to_bq.py
 ```
