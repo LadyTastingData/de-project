@@ -88,6 +88,8 @@ Create Prefect GCS and GitHub blocks:
 ```
 python make_gcp_blocks.py 
 python make_gh_block.py
+prefect block register --file make_gcp_blocks.py 
+prefect block register --file make_gh_block.py
 ```
 
 In order to download the data set from Kaggle and upload it to Google Cloud Storage, go to the root folder, i.e., de-project.
