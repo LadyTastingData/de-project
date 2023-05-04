@@ -90,9 +90,20 @@ python make_gcp_blocks.py
 python make_gh_block.py
 ```
 
-In order to download data from Kaggle and upload it to Google Cloud Storage, go to the root folder, i.e., de-project, and run the following commands:
+In order to download the data set from Kaggle and upload it to Google Cloud Storage, go to the root folder, i.e., de-project.
+
+Then, run the following commands:
 ```
-prefect deployment build prefect/etl_web_to_gcs.py:etl_web_to_gcs --name web_to_gcs -sb github/de-project-ghblock --apply
+prefect deployment build prefect/etl_web_to_gcs.py:etl_web_to_gcs --name "web_to_gcs" -sb github/de-project-ghblock
+```
+Inside the generated etl_web_to_gcs-deployment.yaml file, edit the parameters:
+```
+parameters: {"kaggle_user": "sidtwr", "dataset_name": "videogames-sales-dataset", "download_path": "data", "data_file": "Video_Games_Sales_as_at_22_Dec_2016"}
+```
+
+Then, run:
+```
+prefect deployment apply etl_web_to_gcs-deployment.yaml
 prefect agent start --work-queue "default"
 ```
 
