@@ -55,9 +55,10 @@ pip install kaggle
 git clone https://github.com/LadyTastingData/de-project.git
 ```
 
-- Move to the folder de-project:
+- Move to the folder de-project and create a data folder:
 ```
 cd de-project
+mkdir data
 ```
 
 
