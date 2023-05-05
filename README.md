@@ -32,7 +32,7 @@ The data pipeline developed in this project can be summarized in 6 steps:
 <li> Create a dashboard using Google Looker Studio
 </ol>
 
-
+At the end of this data pipeline, we would like to gain some insight about the global sales of games.
 
 
 ## Reproducibility:
