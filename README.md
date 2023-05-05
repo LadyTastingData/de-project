@@ -147,5 +147,5 @@ As the last step, I have created a dashboard using Google Looker Studio.
 </object>
 
 
-Alternatively, it can be seen in [Looker Studio](https://lookerstudio.google.com/reporting/ce18b05c-e1f7-4479-b056-c084bc77c3b5).
+Alternatively, it can also be seen in [Looker Studio](https://lookerstudio.google.com/reporting/ce18b05c-e1f7-4479-b056-c084bc77c3b5).
 
