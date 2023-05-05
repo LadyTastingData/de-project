@@ -123,9 +123,9 @@ python etl_gcs_to_bq.py
 ```
 
 ### Data transformations with dbt:
-I have included data type transformations already when I upload the data to GC Storage and then to BigQuery. In addition, I partitioned the data by Year_of_Release and clustered by Platform, using the following SQL transformation in BigQuery. As I did not need more complex transformations, I have not used dbt or Spark.
+I have already performed data type transformations when I upload the data to GC Storage and then to BigQuery. In addition, I partitioned the data by Year_of_Release and clustered by Platform, using the following SQL transformation in BigQuery. As I did not need more complex transformations, I have not used dbt or Spark.
 
-I created the partitioned table in BigQuery using the following codes (In order to reproduce replace "lithe-breaker-385610" with your own project ID):
+I created the partitioned table in BigQuery using the following code (in order to reproduce replace "lithe-breaker-385610" with your own project ID):
 
 ```
 -- Create a partitioned table from external table and cluster by affiliated_base_number
