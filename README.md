@@ -117,12 +117,8 @@ prefect agent start --work-queue "default"
 
 Alternatively, files can be run locally as normal python files as following:
 
-- To download data from Kaggle and upload it to Google Cloud Storage:
 ```
 python etl_web_to_gcs.py
-```
-- Move the data from GC bucket to BigQuery:
-```
 python etl_gcs_to_bq.py
 ```
 
