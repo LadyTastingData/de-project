@@ -129,7 +129,7 @@ I have already performed data type transformations when I upload the data to GC 
 I created the partitioned table in BigQuery using the following code (in order to reproduce replace "lithe-breaker-385610" with your own project ID):
 
 ```
--- Create a partitioned table from external table and cluster by affiliated_base_number
+-- Create a partitioned table from games table and partition it by Year_of_Release and cluster by Platform
 CREATE OR REPLACE TABLE lithe-breaker-385610.games_data.games_partitoned
 PARTITION BY DATE(Year_of_Release)
 CLUSTER BY Platform AS
