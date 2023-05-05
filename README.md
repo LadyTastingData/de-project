@@ -28,7 +28,7 @@ The data pipeline developed in this project can be summarized in 6 steps:
 <li> Use Prefect for workflow orchestration
 <li> Upload data to Google Cloud Storage (Data lake)
 <li> Move data from GC Storage to BigQuery (Data warehouse)
-<li> Apply data transformations using dbt
+<li> Apply data transformations using SQL queries in BigQuery
 <li> Create a dashboard using Google Looker Studio
 </ol>
 
@@ -142,7 +142,7 @@ As the last step, I have created a dashboard using Google Looker Studio.
 
 <object data="https://github.com/LadyTastingData/de-project/blob/main/games_data_analysis.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/LadyTastingData/de-project/blob/main/games_data_analysis.pdf">
-        <p>The dashboard can be seen <a href="https://github.com/LadyTastingData/de-project/blob/main/games_data_analysis.pdf">here.</a>.</p>
+        <p>The dashboard can be seen <a href="https://github.com/LadyTastingData/de-project/blob/main/games_data_analysis.pdf">here</a>.</p>
     </embed>
 </object>
 
