@@ -140,6 +140,11 @@ SELECT * FROM lithe-breaker-385610.games_data.games;
 
 As the last step, I have created a dashboard using Google Looker Studio.
 
+<p align="center">
+<img src="games_data_analysis.png" width="1000">
+</p>
+
+
 <object data="https://github.com/LadyTastingData/de-project/blob/main/games_data_analysis.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/LadyTastingData/de-project/blob/main/games_data_analysis.pdf">
         <p>The dashboard can be seen <a href="https://github.com/LadyTastingData/de-project/blob/main/games_data_analysis.pdf">here</a>.</p>
