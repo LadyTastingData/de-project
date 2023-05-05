@@ -127,18 +127,9 @@ python etl_gcs_to_bq.py
 ```
 
 ### Data transformations with dbt:
+I have included data type transformations already when I upload the data to GC Storage and then to BigQuery. In addition, I partitioned the data by Year_of_Release and clustered by Platform, using the following SQL transformation in BigQuery. As I did not need more complex transformations, I have not used dbt or Spark.
 
-I created the external table in BigQuery using the following codes:
-```
--- Creating external table referring to gcs path
-CREATE OR REPLACE EXTERNAL TABLE `lithe-breaker-385610.dbt_ht.external_gamesdata`
-OPTIONS (
-  format = 'parquet',
-  uris = ['gs://kaggle_data_lake_lithe-breaker-385610/data/Video_Games_Sales_as_at_22_Dec_2016.parquet']
-);
-```
-
-
+I created the partitioned table in BigQuery using the following codes (In order to reproduce replace "lithe-breaker-385610" with your own project ID):
 
 ```
 -- Create a partitioned table from external table and cluster by affiliated_base_number
@@ -147,3 +138,14 @@ PARTITION BY DATE(Year_of_Release)
 CLUSTER BY Platform AS
 SELECT * FROM lithe-breaker-385610.games_data.games;
 ```
+
+### Visualisation
+
+As the last step, I have created a dashboard using Google Looker Studio
+
+<object data="http://yoursite.com/the.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="http://yoursite.com/the.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
