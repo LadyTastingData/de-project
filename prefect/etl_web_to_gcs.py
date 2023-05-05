@@ -30,6 +30,8 @@ def read_data(download_path: str, data_file: str) -> pd.DataFrame:
 
 @task(log_prints=True)
 def clean(df: pd.DataFrame) -> pd.DataFrame:
+     df["Year_of_Release"] = pd.to_datetime(df["Year_of_Release"],format="%Y")
+     df["year"] = pd.DatetimeIndex(df["Year_of_Release"]).year
      df["Year_of_Release"] = df["Year_of_Release"].astype('Int64')
      df["Critic_Count"] = df["Critic_Count"].astype('Int64')
      df["User_Count"] = df["User_Count"].astype('Int64')
