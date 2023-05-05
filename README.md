@@ -128,4 +128,22 @@ python etl_gcs_to_bq.py
 
 ### Data transformations with dbt:
 
+I created the external table in BigQuery using the following codes:
+```
+-- Creating external table referring to gcs path
+CREATE OR REPLACE EXTERNAL TABLE `lithe-breaker-385610.dbt_ht.external_gamesdata`
+OPTIONS (
+  format = 'parquet',
+  uris = ['gs://kaggle_data_lake_lithe-breaker-385610/data/Video_Games_Sales_as_at_22_Dec_2016.parquet']
+);
+```
 
+
+
+```
+-- Create a partitioned table from external table and cluster by affiliated_base_number
+CREATE OR REPLACE TABLE lithe-breaker-385610.games_data.games_partitoned
+PARTITION BY DATE(Year_of_Release)
+CLUSTER BY Platform AS
+SELECT * FROM lithe-breaker-385610.games_data.games;
+```
