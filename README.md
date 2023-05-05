@@ -43,12 +43,12 @@ In order to reproduce this project, apply the following steps:
 ```
 pip install kaggle
 ```
-- Then, download your kaggle.json credentials from Kaggle API, and put that json file in the folder .kaggle/.
+- Then, download your kaggle.json credentials from Kaggle API, and put that json file in the folder "~/.kaggle/"
 
 
 - Create a new folder for this project
 
-- Copy the json file which includes your Google Cloud service account credentials into the folder
+- Copy the json file which includes your Google Cloud service account credentials into the folder "~/.google/credentials/"
 
 - Clone this GitHub repo:
 ```
