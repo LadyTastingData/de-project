@@ -55,7 +55,7 @@ pip install kaggle
 
 - Clone this GitHub repo:
 ```
-git clone https://github.com/LadyTastingData/de-project.git
+git clone https://github.com/topahande/de-project.git
 ```
 
 - Move to the folder `de-project` and create a `data` folder:
