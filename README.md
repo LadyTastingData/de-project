@@ -2,7 +2,7 @@
 Note: This is a hands-on project by which I practiced some data engineering concepts following the content from [DataTalksClub](https://github.com/DataTalksClub/data-engineering-zoomcamp).
 Please keep in mind that special attention was not paid to the actual analysis, but more to the workflows and tools.
 
-## Video Games Sales
+## Data set: Video games sales
 
 This project aims to create a data pipeline using Video Games Sales dataset from Kaggle. The data set and more information about it can be found at this link: https://www.kaggle.com/datasets/sidtwr/videogames-sales-dataset
 
@@ -24,6 +24,8 @@ The data consist of:
 - User_Count: Number of users who gave the user_score
 - Developer: Party responsible for creating the game
 - Rating: The ESRB ratings
+
+## Data pipeline 
 
 The data pipeline developed in this project can be summarized in 4 steps:
 <ol>
