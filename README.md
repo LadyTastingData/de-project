@@ -1,7 +1,8 @@
-# [DataTalksClub](https://github.com/DataTalksClub/data-engineering-zoomcamp) - Data Engineering Zoomcamp Project
-## Video Games Sales
+# Data Engineering Project
+Note: This is a hands-on project by which I practiced some data engineering concepts following the content from [DataTalksClub](https://github.com/DataTalksClub/data-engineering-zoomcamp).
+Please keep in mind that special attention was not paid to the actual analysis, but more to the workflows and tools.
 
-##
+## Video Games Sales
 
 This project aims to create a data pipeline using Video Games Sales dataset from Kaggle. The data set and more information about it can be found at this link: https://www.kaggle.com/datasets/sidtwr/videogames-sales-dataset
 
@@ -36,7 +37,7 @@ The data pipeline developed in this project can be summarized in 4 steps:
 <li> Create a dashboard using Google Looker Studio
 </ol>
 
-At the end of this data pipeline, we would like to gain some insight about the global sales of games.
+At the end of this data pipeline, I would like to gain some insight about the global sales of games.
 
 
 ## Reproducibility:
@@ -130,7 +131,7 @@ python etl_gcs_to_bq.py
 ```
 
 ### Data transformation:
-I have already performed data type transformations when I uploaded the data to GC Storage and then to BigQuery. In addition, I partitioned the data by `Year_of_Release` and clustered by `Platform`, using the following SQL transformation in BigQuery. As I did not need more complex transformations, I have not used dbt or Spark.
+I performed data type transformations when I uploaded the data to GC Storage and then to BigQuery. In addition, I partitioned the data by `Year_of_Release` and clustered by `Platform`, using the following SQL transformation in BigQuery. As I did not need more complex transformations, I have not used dbt or Spark.
 
 I created the partitioned table in BigQuery using the following code (in order to reproduce replace "lithe-breaker-385610" with your own project ID):
 
