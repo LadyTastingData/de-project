@@ -58,10 +58,10 @@ pip install kaggle
 
 - Clone this GitHub repo:
 ```
-git clone https://github.com/topahande/de-project.git
+git clone https://github.com/topahande/data-engineering-project.git
 ```
 
-- Move to the folder `de-project` and create a `data` folder:
+- Move to the folder `data-engineering-project` and create a `data` folder:
 ```
 cd de-project
 mkdir data
