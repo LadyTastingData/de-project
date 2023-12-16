@@ -1,6 +1,5 @@
 # Data Engineering Project
-Note: This is a hands-on project where I practiced some data engineering concepts following the content from [DataTalksClub](https://github.com/DataTalksClub/data-engineering-zoomcamp).
-Please keep in mind that special attention was not paid to the actual analysis, but more to the workflows and tools.
+This is a hands-on project where I practiced data engineering concepts following the content from [DataTalksClub Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) and received my [certificate](https://certificate.datatalks.club/dezoomcamp/2023/83f391d9d3b29b00f6e6265f3d4b5c4af66ce627.pdf). Please keep in mind that special attention was paid more to the workflows and tools but not to the actual analysis.
 
 ## Data set: Video games sales
 
